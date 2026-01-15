@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>YazanWashiro Elytra Quest</title>
+
+<style>
+body{
+background:black;
+color:white;
+text-align:center;
+font-family:Arial;
+margin:0;
+}
+
+button{
+padding:12px 20px;
+margin:10px;
+font-size:16px;
+cursor:pointer;
+}
+
+#jumpscare{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+color:lime;
+font-size:40px;
+align-items:center;
+justify-content:center;
+z-index:999;
+}
+</style>
+</head>
+
+<body>
+
+<h1>YazanWashiro Elytra Quest</h1>
+
+<p>
+Searching End Cities after the dragon for Elytra...
+</p>
+
+<button onclick="elytra()">Press to get elytra</button>
+<button onclick="creeper()">Creeper Mode</button>
+
+<p id="result"></p>
+
+<div id="jumpscare">💥 BOOM! CREEPER 💥</div>
+
+<script>
+function elytra(){
+document.getElementById("result").innerText="YOU FOUND THE ELYTRA!";
+}
+
+function creeper(){
+let j=document.getElementById("jumpscare");
+j.style.display="flex";
+setTimeout(()=>{j.style.display="none"},1500);
+}
+</script>
+
+</body>
+</html>
